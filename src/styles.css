@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #121212; /* Matches your dark theme */
+    overflow-x: hidden;
+}
+
+/* This ensures the container takes the full screen without gaps */
+.container {
+    margin-top: 0 !important; 
+    padding-top: 50px;
+    min-height: 100vh;
+}

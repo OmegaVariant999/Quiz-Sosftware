@@ -1,0 +1,53 @@
+<div class="container mt-5">
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card shadow text-center p-4">
+
+        <!-- Greeting -->
+        <p class="fs-4 fw-semibold mb-2">
+          Nice Work, {{ name }} 👋 
+        </p>
+
+        <!-- Title -->
+        <h4 class="mb-3">Quiz Result 🎉</h4>
+
+        <!-- Score -->
+        <h2 class="text-primary">
+          {{ finalScore }} / {{ total }}
+        </h2>
+
+        <!-- Message -->
+        
+          <!-- {{ finalScore >= total/2 ? 'Good job!' : 'Keep practicing!' }} -->
+            @if(finalScore==5){
+                <p class="mt-2 text-success">EXCELLENTT!!🤩</p>
+            }
+            @else if(finalScore >=3){
+                <p class="mt-2 text-info">Average!!😅</p>
+            }
+            @else if(finalScore >=1){
+                <p class="mt-2 text-info">Not bad!!😒</p>
+            }
+            @else{
+                <p class="text-danger fw-bold fs-5 text-center">!!TRY AGAIN!! 😓</p>
+            }
+
+        <!-- Buttons -->
+        <div class="mt-4 d-flex justify-content-center gap-3">
+          <button class="btn btn-outline-warning" (click)="retryQuiz()">
+            Retry
+          </button>
+
+          <button class="btn btn-primary px-4" [routerLink]="['/home']">
+            Take me to Home
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
